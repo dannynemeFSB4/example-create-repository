@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Calculator</title>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <br>
+    <input id="numeroA">NUMBER A</input>
+    <br>
+    <br>
+    <input id="numeroB">NUMBER B</input>
+    <br>
+    <br>
+    <button id="suma" onclick="suma()">SUM (+)</button>
+    <h1>OUTPUT:</h1><input id="resultadoSuma"></input>
+
+    <script>
+        console.log("Ejecutando código Javascript!!!")
+
+        function suma(){
+            console.log("Ejecutando suma");
+
+            const valorA = document.getElementById("numeroA").value;
+            const valorB = document.getElementById("numeroB").value;
+
+            console.log("Valor A =>", valorA);
+            console.log("Valor B =>", valorB);
+
+            const resultado = Number(valorA) + Number(valorB)
+            console.log("Resultado =>", resultado)
+
+            let campoResultado = document.getElementById("resultadoSuma")
+
+            campoResultado.value = resultado
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
